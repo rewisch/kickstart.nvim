@@ -35,6 +35,15 @@ return {
       desc = 'Debug: Start/Continue',
     },
     {
+      '<F6>',
+      function()
+        require('dap').terminate()
+        require('dapui').close()
+        require('dap').close()
+      end,
+      desc = 'Debug: Close',
+    },
+    {
       '<F1>',
       function()
         require('dap').step_into()
